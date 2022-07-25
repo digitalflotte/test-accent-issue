@@ -1,0 +1,27 @@
+section.side-by-side
+  &.has-gray-bg
+    background-color: $black-haze
+  .container
+    @include until($tablet)
+      max-width: 480px
+    .columns
+      .column
+        display: flex
+        justify-content: space-around
+        .image-box
+          background-position: center center
+          background-size: contain
+          background-repeat: no-repeat
+          width: 460px
+          height: 330px
+        .text-box
+          align-self: center
+          .button
+            margin-top: 1rem
+            min-width: 250px
+          a
+            font-weight: $weight-bold
+  @include until($tablet)
+    text-align: center
+    .column ul
+      text-align: left

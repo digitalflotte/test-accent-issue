@@ -1,0 +1,51 @@
+.snackbar-wrapper {
+  position: fixed;
+  right: 0;
+  z-index: 300;
+  width: 100%;
+  max-width: 20rem;
+  padding: 10px;
+
+  &--bottom {
+    bottom: 0;
+  }
+
+  &--top {
+    top: 0;
+  }
+
+  &__snackbar {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-weight: $weight-bold;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    &--success {
+      background-color: $green;
+    }
+    &--error {
+      background-color: $red;
+    }
+    &--warning {
+      background-color: $warning;
+    }
+
+    &__message {
+      padding-right: 5px;
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    &__close {
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      font-size: 13px;
+    }
+  }
+}

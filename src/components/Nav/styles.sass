@@ -1,0 +1,204 @@
+.navbar
+  .container
+    .navbar-brand
+      margin-right: 1rem
+      margin-left: 0
+      @include until($widescreen)
+        .navbar-item
+          img
+            max-height: 2rem
+      @include until($desktop)
+        .navbar-item
+          margin-left: auto
+          margin-right: auto
+          @include on_small_mobile
+            padding-left: 0
+            img
+              max-height: 2rem
+        .phone-item
+          display: flex
+          align-self: center
+          justify-content: space-around
+          border-radius: 50%
+          width: 30px
+          height: 30px
+          color: white
+          font-size: 16px
+          background-color: $primary
+          .fa
+            display: flex
+            align-self: center
+
+      @include on_small_mobile
+        margin-right: 0.2rem
+
+      .cart-mobile-link
+        margin-left: 10px
+        color: $text
+        display: flex
+        align-self: center
+        .badge
+          margin-top: -13px
+        .fas
+          font-size: 26px
+
+    .navbar-menu
+      margin-right: 0
+      @include until($desktop)
+        padding: 0
+        border-top: 1px solid $black-haze
+      .navbar-start
+        @include until($desktop)
+          text-align: center
+        @include until_600
+          max-width: 380px
+          margin-left: auto
+          margin-right: auto
+        @include on_small_mobile
+          max-width: 320px
+        .navbar-item
+          font-weight: $weight-bold
+          border-top: 5px solid transparent
+          border-bottom: 5px solid transparent
+          padding-left: 0
+          padding-right: 0
+          margin-left: 1rem
+          margin-right: 1rem
+          text-transform: uppercase
+          font-size: 13px
+          transition: border-color 0.3s ease
+          &.is-active, &:hover
+            border-bottom: 5px solid $primary
+            transition: border-color 0.3s ease
+          @include until($desktop)
+            display: inline-block
+          @include on_small_mobile
+            font-size: 11px
+        .button.is-rounded.is-small
+          vertical-align: middle
+          @include on_small_mobile
+            font-size: 11px
+            padding-left: 5px
+            padding-right: 5px
+      .navbar-end
+        display: flex
+        align-self: center
+        button
+          background: transparent
+          border: none
+          color: #080204
+          padding: 0
+          width: 30px
+          margin-left: 5px
+          margin-right: 5px
+          outline: none
+          cursor: pointer
+        .cart
+          margin-right: 10px
+          .fas
+            font-size: 26px
+          .badge
+            color: black
+            font-size: 14px
+            position: absolute
+            top: 15px
+            right: 5px
+            font-weight: $weight-bold
+            @include until($tablet)
+              top: 10px
+        &__call
+          margin-right: 2rem
+          text-align: right
+          font-size: 12px
+          a
+            font-size: 16px
+            font-weight: $weight-bold
+            color: black
+            line-height: 1
+        .button
+          font-size: 14px
+          font-weight: $weight-bold
+          @include until($widescreen)
+            margin-right: 0.5rem
+            font-size: 13px
+      @include until($desktop)
+        &.is-open
+          display: block
+          .navbar-end
+            display: none
+
+.tacho-losungen
+  .navbar .container .navbar-menu .navbar-start .navbar-item
+    @include until($widescreen)
+      margin-left: 0.5rem
+      margin-right: 0.5rem
+    @include until($desktop)
+      margin-left: 1rem
+      margin-right: 1rem
+
+.submenu-panel
+  margin-top: 0
+  background-color: $black-haze
+  box-shadow: 0 2px 5px 0px rgba(0,0,0,0.2)
+  .columns
+    margin-bottom: 0
+    .column
+      min-width: 250px
+  .col-title
+    font-weight: $weight-bold
+    color: black
+    display: block
+    margin-top: 1rem
+    margin-bottom: 0.5rem
+    font-size: 18px
+  a.col-title
+    &:hover
+      text-decoration: underline
+
+  .submenu-link-item
+    display: block
+    font-weight: $weight-bold
+    font-size: 14px
+    color: $emperor
+    padding: 0.5rem 0
+    margin-left: 1rem
+    position: relative
+
+    &:before
+      content: '\f105'
+      font-family: "FontAwesome"
+      position: absolute
+      top: 50%
+      left: -15px
+      transform: translateY(-50%)
+      transition: left 0.3s ease
+
+    &:hover
+      &:before
+        left: -10px
+        transition: left 0.3s ease
+  &.submenu-is-open
+    box-shadow: 0 400px 0 400px rgba(0,0,0,0.5)
+  @include until($desktop)
+    display: none !important
+    &.burger-is-open
+      display: block !important
+
+
+.navbar-burger
+  margin-left: 0
+  span
+    height: 3px
+    width: 24px
+    left: 50%
+    margin-left: -12px
+    &:nth-child(2)
+      margin-top: 2px
+    &:nth-child(3)
+      margin-top: 4px
+  &.is-active
+    span
+      &:nth-child(2), &:nth-child(3)
+        margin-top: 0
+  @include on_small_mobile
+    width: 3rem

@@ -1,0 +1,84 @@
+section.newsletter
+  background-color: $black-haze
+  min-height: 274px
+  padding-top: 55px
+
+  .container
+    @include until($tablet)
+      max-width: 310px
+      margin-left: auto
+      margin-right: auto
+    .title
+      margin-bottom: 10px
+      font-weight: $weight-light
+    p
+      font-size: 14px
+      color: black
+
+    .newsletter_form
+      margin: 30px auto 50px auto
+      width: 100%
+      max-width: 463px
+      .input
+        background: transparent
+        color: black
+        font-size: 18px
+        border-left: none
+        border-top: none
+        border-right: none
+        border-bottom: 1px solid black
+        padding-left: 0
+        padding-right: 0
+        box-shadow: none
+        border-radius: 0
+        @include placeholder
+          color: black
+      button
+        width: 28px
+        height: 21px
+        border: none
+        position: absolute
+        right: 0
+        bottom: 20px
+        background: transparent
+        font-size: 24px
+        cursor: pointer
+
+.footer
+  padding-bottom: 3rem
+
+  a
+    color: $gray-chateau
+    display: block
+    font-weight: $weight-bold
+    font-size: 14px
+    margin: 0.5rem 0
+    @include on_small_mobile
+      font-size: 12px
+    &:hover
+      color: white
+
+  .title
+    color: white
+    text-transform: uppercase
+    @include on_small_mobile
+      font-size: 12px
+    a
+      color: white
+      margin-top: 0
+
+section.footer-bottom, section.footer-top
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
+  background-color: rgba(black, 0.86)
+  color: $gray-chateau
+  font-size: 13px
+  font-weight: $weight-bold
+
+section.footer-top
+  a
+    color: $gray-chateau
+    font-size: 22px
+    margin: 0 1rem
+    &:hover
+      color: white

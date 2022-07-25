@@ -1,0 +1,30 @@
+section.bg-image-section
+  background-position: center center
+  background-size: cover
+  position: relative
+  color: white
+  min-height: 380px
+
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.4)
+  .container
+    .columns
+      .column
+        max-width: 590px
+        .title
+          color: white
+        p
+          font-weight: $weight-bold
+          margin-bottom: 1rem
+        .button
+          margin-top: 1rem
+          min-width: 350px
+          @include until($tablet)
+            min-width: auto
+

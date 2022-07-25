@@ -1,0 +1,58 @@
+.top-nav
+  background-color: black
+  color: white
+  line-height: 34px
+  @include until($desktop)
+    margin-top: -69px
+    transition: margin 0.3s ease
+    &.is-open
+      margin-top: 0px
+      .container
+        max-width: 500px
+        .columns
+          .column
+            width: 100%
+
+  &__tabs
+    display: flex
+    justify-content: center
+    @include until($desktop)
+      border-bottom: 1px solid $emperor
+    a
+      color: white
+      text-transform: uppercase
+      font-size: 12px
+      padding: 0 10px
+      font-weight: $weight-bold
+      transition: background-color 0.3s ease
+      @include until($desktop)
+        padding: 0 5px
+        flex: 1
+        text-align: center
+
+      &.is-active
+        background-color: white
+        color: $emperor
+      &:hover:not(.is-active)
+        background-color: $emperor
+
+  &__right
+    display: flex
+    justify-content: flex-end
+    @include until($desktop)
+      justify-content: space-between
+    a
+      color: $gray-chateau
+      font-size: 12px
+      font-weight: $weight-bold
+      padding: 0 10px
+      transition: all 0.2s ease
+
+      &:hover, &.is-active
+        background-color: rgba($gray-chateau, 0.5)
+        color: white
+
+      &.app-button
+        background-color: white
+        color: black
+        margin-left: 10px

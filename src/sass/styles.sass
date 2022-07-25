@@ -1,0 +1,158 @@
+@charset "utf-8"
+
+@import "variables"
+
+@import "~bulma/bulma.sass"
+@import "~react-responsive-carousel/lib/styles/carousel.min.css"
+
+=on_small_mobile
+  @media screen and (max-width: 419px)
+    @content
+
+=until_800
+  @media screen and (max-width: 799px)
+    @content
+
+=until_760
+  @media screen and (max-width: 759px)
+    @content
+
+=until_600
+  @media screen and (max-width: 599px)
+    @content
+
+=until_523
+  @media screen and (max-width: 523px)
+    @content
+
+=until_425
+  @media screen and (max-width: 424px)
+    @content
+
+=until_400
+  @media screen and (max-width: 399px)
+    @content
+
+=until_370
+  @media screen and (max-width: 369px)
+    @content
+
+@import "../components/TopNav/styles"
+@import "../components/Layout/hero"
+@import "../components/Nav/styles"
+@import "../components/BgImageSection/styles"
+@import "../components/SideBySide/styles"
+@import "../components/ServiceBoxes/styles"
+@import "../components/Footer/styles"
+@import "../components/WhatOurCustomersSay/styles"
+@import "../components/SnackBar/styles"
+@import "../components/BasketPanel/styles"
+@import "../components/SearchOverlay/styles"
+@import "../components/HeroForm/styles"
+
+.lt
+  text-decoration: line-through
+
+.rjttt
+  display: none
+
+.pink
+  color: $primary !important
+
+.container
+  max-width: 1200px
+  &.narrower
+    max-width: 1100px
+
+div.produkt .container
+  &.is-fluid
+    padding-left: 0
+    padding-right: 0
+
+.showBelow760
+  @include until_760
+    display: block !important
+
+.hideBelow760
+  @include until_760
+    display: none
+
+
+.columns.spaceBetween
+  justify-content: space-between
+
+.columns.jcc
+  justify-content: center
+
+.title
+  &.is-1
+    @include until($widescreen)
+      font-size: 2rem
+  &.is-3
+    @include until($widescreen)
+      font-size: 1.5rem
+
+a
+  transition: color 0.3s ease
+  &.no-underline
+    text-decoration: none !important
+.button
+  transition: background-color 0.3s ease
+  &.is-large
+    @include until($widescreen)
+      font-size: 16px
+  &.google
+    background-color: #de5246
+    color: white
+  &.facebook
+    background-color: #3b5998
+    color: white
+  &.is-green
+    background-color: $green
+    border-color: $green
+    color: white
+
+.content
+  iframe
+    width: 100%
+    height: 54vw
+    max-height: 675px
+
+.carousel-box
+  height: 424px
+  display: block
+  background-size: cover
+  background-position: center center
+  @include until($widescreen)
+    height: 34vw
+  @include until($tablet)
+    height: 31vw
+
+.section.has-gray-bg
+  background-color: $black-haze
+
+section.home-page-text
+  .container
+    @include until($tablet)
+      max-width: 480px
+
+.datenschutz
+  .section.text
+    .content
+      h4 + ul
+        list-style: none
+
+.fullScreenLock
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(200,200,200,0.3)
+  z-index: 9999
+  display: flex
+  justify-content: center
+
+  img
+    flex: 1
+    max-width: 150px
